@@ -262,11 +262,11 @@ const agregarPlayera = (tipoCara, piel, ojos, nariz, tipoCabello, colorCabello, 
 function mostrarPedido() {
     let mensaje = "Resumen de tu pedido enviado a producción:\n"
 
-pedidos.forEach( (pedido) => {
-    mensaje += `tipo cara:${pedido.tipoCara}  piel:${pedido.piel}  ojos:${pedido.ojos} mariz:${pedido.nariz}  tipo cabello:${pedido.tipoCabello}  Colo de cabello:${pedido.colorCabello}  boca:${pedido.boca} \n`
-});
+    pedidos.forEach( (pedido) => {
+        mensaje += `tipo cara:${pedido.tipoCara}  piel:${pedido.piel}  ojos:${pedido.ojos} mariz:${pedido.nariz}  tipo cabello:${pedido.tipoCabello}  Colo de cabello:${pedido.colorCabello}  boca:${pedido.boca} \n`
+    });
 
-alert(mensaje);
+    alert(mensaje);
 
 }
 
@@ -340,6 +340,7 @@ while (opcion != 't' && opcion != 'T') {
 }
 
 
-alert('Gracias. Hemos terminado');
+mostrarPedido();
+//alert('Gracias. Hemos terminado');
 
 
