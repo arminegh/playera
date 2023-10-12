@@ -2,7 +2,9 @@
 let opcion = prompt('Elige una opción: \nA- Agregar playera \nT - Terminar');
 let tipoCara, piel, ojos, nariz, tipoCabello, colorCabello, boca = 99;
 
-const tipoCara = [
+const pedidos = [];
+
+const tipoCaras = [
     {
         id: 'tp01',
         descripcion: "ovalada",
@@ -20,7 +22,7 @@ const tipoCara = [
     }
 ];
 
-const piel = [
+const pieles = [
     {
         id: 'cp01',
         descripcion: "blanca",
@@ -38,7 +40,7 @@ const piel = [
     }
 ];
 
-const ojos = [
+const tipoOjos = [
     {
         id: 'oj01',
         descripcion: "grandes",
@@ -56,7 +58,7 @@ const ojos = [
     }
 ];
 
-const nariz = [
+const narices = [
     {
         id: 'na01',
         descripcion: "recta",
@@ -74,7 +76,7 @@ const nariz = [
     }
 ];
 
-const tipoCabello = [
+const tipoCabellos = [
     {
         id: 'tc01',
         descripcion: "lacio",
@@ -92,7 +94,7 @@ const tipoCabello = [
     }
 ];
 
-const colorCabello = [
+const colorCabellos = [
     {
         id: 'cc01',
         descripcion: "negro",
@@ -110,7 +112,7 @@ const colorCabello = [
     }
 ];
 
-const boca = [
+const bocas = [
     {
         id: 'bo01',
         descripcion: "delgada",
@@ -127,6 +129,8 @@ const boca = [
         imagen: './img/bo03.jpg'
     }
 ];
+
+
 
 function confirmar() {
     let descripcion = "Este es el resumen de tu pedido.\nTipo de cara "
@@ -238,6 +242,33 @@ function confirmar() {
     
 }
 
+// FUNCION AGREGAR A PRODUCCIÓN  PEDIDO
+const agregarPlayera = (tipoCara, piel, ojos, nariz, tipoCabello, colorCabello, boca) => {
+    
+    const nuevaPlayera = {
+        tipoCara: tipoCara, 
+        piel: piel, 
+        ojos: ojos, 
+        nariz: nariz, 
+        tipoCabello: tipoCabello, 
+        colorCabello: colorCabello, 
+        boca: boca,
+    };
+
+    pedidos.push(nuevaPlayera);
+}
+
+
+function mostrarPedido() {
+    let mensaje = "Resumen de tu pedido enviado a producción:\n"
+
+pedidos.forEach( (pedido) => {
+    mensaje += `tipo cara:${pedido.tipoCara}  piel:${pedido.piel}  ojos:${pedido.ojos} mariz:${pedido.nariz}  tipo cabello:${pedido.tipoCabello}  Colo de cabello:${pedido.colorCabello}  boca:${pedido.boca} \n`
+});
+
+alert(mensaje);
+
+}
 
 while (opcion != 't' && opcion != 'T') {
 
@@ -297,6 +328,7 @@ while (opcion != 't' && opcion != 'T') {
 
 
     if ( confirmado == "s" || confirmado == "S" ){
+        agregarPlayera (tipoCara, piel, ojos, nariz, tipoCabello, colorCabello, boca);
         alert('Playera agregada, enviada a producion. Espera tu envíio')
     } else {
         alert('Pedido cancelado')    
@@ -309,3 +341,5 @@ while (opcion != 't' && opcion != 'T') {
 
 
 alert('Gracias. Hemos terminado');
+
+
