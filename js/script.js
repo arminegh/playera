@@ -2,6 +2,131 @@
 let opcion = prompt('Elige una opción: \nA- Agregar playera \nT - Terminar');
 let tipoCara, piel, ojos, nariz, tipoCabello, colorCabello, boca = 99;
 
+const tipoCara = [
+    {
+        id: 'tp01',
+        descripcion: "ovalada",
+        imagen: './img/tp01.jpg'
+    },
+    {
+        id: 'tp02',
+        descripcion: "redonda",
+        imagen: './img/tp02.jpg'
+    },
+    {
+        id: 'tp03',
+        descripcion: "alargada",
+        imagen: './img/tp03.jpg'
+    }
+];
+
+const piel = [
+    {
+        id: 'cp01',
+        descripcion: "blanca",
+        imagen: './img/cp01.jpg'
+    },
+    {
+        id: 'cp02',
+        descripcion: "morena",
+        imagen: './img/cp02.jpg'
+    },
+    {
+        id: 'cp03',
+        descripcion: "media",
+        imagen: './img/cp03.jpg'
+    }
+];
+
+const ojos = [
+    {
+        id: 'oj01',
+        descripcion: "grandes",
+        imagen: './img/oj01.jpg'
+    },
+    {
+        id: 'oj02',
+        descripcion: "redondos",
+        imagen: './img/oj02.jpg'
+    },
+    {
+        id: 'oj03',
+        descripcion: "pequeños",
+        imagen: './img/oj03.jpg'
+    }
+];
+
+const nariz = [
+    {
+        id: 'na01',
+        descripcion: "recta",
+        imagen: './img/na01.jpg'
+    },
+    {
+        id: 'na02',
+        descripcion: "ancha",
+        imagen: './img/na02.jpg'
+    },
+    {
+        id: 'na03',
+        descripcion: "delgada",
+        imagen: './img/na03.jpg'
+    }
+];
+
+const tipoCabello = [
+    {
+        id: 'tc01',
+        descripcion: "lacio",
+        imagen: './img/tc01.jpg'
+    },
+    {
+        id: 'tc02',
+        descripcion: "rizado",
+        imagen: './img/tc02.jpg'
+    },
+    {
+        id: 'tc03',
+        descripcion: "pelón",
+        imagen: './img/tc03.jpg'
+    }
+];
+
+const colorCabello = [
+    {
+        id: 'cc01',
+        descripcion: "negro",
+        imagen: './img/cc01.jpg'
+    },
+    {
+        id: 'cc02',
+        descripcion: "rubio",
+        imagen: './img/cc02.jpg'
+    },
+    {
+        id: 'cc03',
+        descripcion: "castaño",
+        imagen: './img/cc03.jpg'
+    }
+];
+
+const boca = [
+    {
+        id: 'bo01',
+        descripcion: "delgada",
+        imagen: './img/bo01.jpg'
+    },
+    {
+        id: 'bo02',
+        descripcion: "gruesa",
+        imagen: './img/bo02.jpg'
+    },
+    {
+        id: 'bo03',
+        descripcion: "mediana",
+        imagen: './img/bo03.jpg'
+    }
+];
 
 function confirmar() {
     let descripcion = "Este es el resumen de tu pedido.\nTipo de cara "
