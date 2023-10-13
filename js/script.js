@@ -323,8 +323,7 @@ while (opcion != 't' && opcion != 'T') {
    let confirmado = confirmar();
 
 
-   /* opcion = prompt('Confirma tu pedido: \n Cara ' + tipoCara + '. Piel ' + piel + '. Ojos ' + ojos + '\nNariz ' + nariz + '. Boca ' + boca + '\nCabello ' + tipoCabello + ' ' + colorCabello + '\nT - Cancelar - Cualquier otra opción para confirmar.')
-    */
+  
 
 
     if ( confirmado == "s" || confirmado == "S" ){
@@ -341,6 +340,6 @@ while (opcion != 't' && opcion != 'T') {
 
 
 mostrarPedido();
-//alert('Gracias. Hemos terminado');
+alert('Gracias. Hemos terminado');
 
 
