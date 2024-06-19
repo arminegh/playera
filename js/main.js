@@ -33,7 +33,7 @@ do {
 } while (otro_pedido == "S" );
 
 
-alert("Total de playeras " + total_pedidos + "\nGacias por tu compra.");
+alert("Total de playeras " + total_pedidos + "\nGracias por tu compra.");
 
 function armar_pedido(piel, ojos, nariz, boca) {
     let pedido_armado = "";
