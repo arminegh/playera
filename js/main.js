@@ -6,7 +6,13 @@ let boca = 0;
 let nariz = 0;
 let total_pedidos = 0;
 
-
+const pedido = {
+    numeroPlayera: 0,
+    piel:0, 
+    ojos:0, 
+    nariz:0, 
+    boca:0,
+}
 
 
 do {
@@ -18,7 +24,7 @@ do {
 
 
     const pedido_descripcion = armar_pedido(piel, ojos, nariz, boca); 
-    prompt("Pedido " + total_pedidos + ":\n" + pedido_descripcion + "\nAgregado correctamente.");
+    alert("Pedido " + total_pedidos + ":\n" + pedido_descripcion + "\nAgregado correctamente.");
     otro_pedido = prompt("Deseas agregar otra playera (S/N)").toUpperCase();
 } while (otro_pedido == "S" );
 
